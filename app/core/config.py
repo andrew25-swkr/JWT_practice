@@ -2,6 +2,8 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
+    DATABASE_URL: str = "sqlite:///./test.db"
+    
     SECRET_KEY: str = "supersecretkey"
     ALGORITHM: str = "HS256"
     ACCESS_TOKNE_EXPIRE_MINUTES: int = 60
