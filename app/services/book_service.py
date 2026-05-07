@@ -17,7 +17,7 @@ def create_book(
     db.commit()
     db.refresh(book)
 
-    return
+    return book
 
 
 # 전체 책 조회
@@ -33,9 +33,9 @@ def get_book(
     book_id: int
 ):
     book = (
-        db.qurey(Book)
+        db.query(Book)
         .filter(Book.id == book_id)
-        .frist()
+        .first()
     )
 
     return book
@@ -47,7 +47,7 @@ def delete_book(
 ):
     
     book = (
-        db.qurey(Book)
+        db.query(Book)
         .filter(Book.id == book_id)
         .first()
     )

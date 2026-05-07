@@ -54,7 +54,7 @@ def authenticate_user(
 def login_user(user: User):
 
     token = create_access_token({
-        "sud": str(user.id)
+        "sub": str(user.id)
     })
 
     return token

@@ -12,7 +12,7 @@ router = APIRouter(
 #책 생성
 @router.post(
     "/",
-    response_description=BookResponse
+    response_model=BookResponse
 )
 def create_new_book(
     book_data: BookCreate,
