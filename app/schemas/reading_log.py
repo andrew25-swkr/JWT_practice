@@ -6,5 +6,11 @@ class ReadingLogCreate(BaseModel):
     review: str | None = None
     rating: int | None = None
 
+class ReadingLogResponse(BaseModel):
+    id: int
+    book_id: int
+    review: str | None
+    rating: int | None
+
     class Config:
         from_attributes = True

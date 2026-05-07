@@ -41,7 +41,7 @@ def get_book(
     return book
 
 # 책 삭제
-def delate_book(
+def delete_book(
     db: Session,
     book_id: int
 ):
