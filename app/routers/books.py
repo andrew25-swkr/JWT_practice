@@ -5,7 +5,7 @@ from app.schemas.book import BookCreate, BookResponse
 from app.services.book_service import create_book, get_book, get_books, delete_book
 
 router = APIRouter(
-    prefix="/books"
+    prefix="/books",
     tags=["Books"]
 )
 
